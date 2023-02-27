@@ -568,13 +568,26 @@ max-width: 400px;
 <center>
 
 
+<iframe src="https://lejoyexstorage.b-cdn.net/others/Joyeux%20Anniversaire.mp3" allow="autoplay" id="iframeAudio">
+</iframe> 
+<script type="text/javascript">
+	 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome){
+      $('#iframeAudio').remove()
+  }
+  else {
+      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+  }
+
+</script>
+
 <center>
-<audio id="tah_audio" controls="controls" autoplay="autoplay" >
-  
+<audio controls autoplay>
   <source src="https://lejoyexstorage.b-cdn.net/others/Joyeux%20Anniversaire.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 </center>
+
 
 
 
